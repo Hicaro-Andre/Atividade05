@@ -4,16 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="container">
       <h2>📝 Lista de Tarefas</h2>
-      <input
-        type="text"
-        id="inputTarefa"
-        placeholder="Digite uma nova tarefa..."
-      />
-      <button id="btnAdicionar">Adicionar</button>
+      <div class="input-group">
+        <input
+          type="text"
+          id="inputTarefa"
+          placeholder="Digite uma nova tarefa..."
+        />
+        <button id="btnAdicionar">Adicionar</button>
+      </div>
       <div class="mensagem" id="mensagem"></div>
       <ul id="listaTarefas"></ul>
     </div>

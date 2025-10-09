@@ -7,20 +7,28 @@
     <title>Simulador de Empréstimo</title>
   </head>
   <body>
-    <h2>Simulador de Empréstimo</h2>
+    <div class="dashboard">
+      <h2>Simulador de Empréstimo</h2>
 
-    <label for="valor">Valor do empréstimo (R$):</label>
-    <input type="number" id="valor" placeholder="Ex: 10000" />
+      <label for="valor">Valor do empréstimo (R$):</label>
+      <input type="number" id="valor" placeholder="Ex: 10000" />
 
-    <label for="parcelas">Quantidade de parcelas (1 a 36):</label>
-    <input type="number" id="parcelas" min="1" max="36" placeholder="Ex: 12" />
+      <label for="parcelas">Quantidade de parcelas (1 a 36):</label>
+      <input
+        type="number"
+        id="parcelas"
+        min="1"
+        max="36"
+        placeholder="Ex: 12"
+      />
 
-    <label for="juros">Taxa de juros mensal (%):</label>
-    <input type="number" id="juros" step="0.01" placeholder="Ex: 2" />
+      <label for="juros">Taxa de juros mensal (%):</label>
+      <input type="number" id="juros" step="0.01" placeholder="Ex: 2" />
 
-    <button id="btnCalcular">Calcular</button>
+      <button id="btnCalcular">Calcular</button>
 
-    <div id="resultado"></div>
+      <div id="resultado"></div>
+    </div>
 
     <script src="script.js"></script>
   </body>

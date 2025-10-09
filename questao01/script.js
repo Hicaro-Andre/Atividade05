@@ -1,19 +1,29 @@
 document.getElementById("btnConverter").addEventListener("click", converterData);
+const dataInput = document.getElementById("dataInput");
+
+
+dataInput.addEventListener("input", () => {
+  let valor = dataInput.value.replace(/\D/g, "");
+  if (valor.length > 2 && valor.length <= 4) {
+    valor = valor.replace(/(\d{2})(\d+)/, "$1/$2");
+  } else if (valor.length > 4) {
+    valor = valor.replace(/(\d{2})(\d{2})(\d+)/, "$1/$2/$3");
+  }
+  dataInput.value = valor;
+});
 
 function converterData() {
-  const input = document.getElementById("dataInput").value.trim();
+  const input = dataInput.value.trim();
   const resultado = document.getElementById("resultado");
-  resultado.textContent = ""; // limpa o conteúdo anterior
+  resultado.textContent = "";
 
   const partes = input.split("/");
-
   if (partes.length !== 3) {
     resultado.textContent = "❌ Formato inválido! Use dd/mm/aaaa.";
     return;
   }
 
   let [dia, mes, ano] = partes.map(Number);
-
   const meses = [
     "", "janeiro", "fevereiro", "março", "abril", "maio", "junho",
     "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"

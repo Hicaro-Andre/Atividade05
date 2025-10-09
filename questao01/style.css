@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1a0033, #2d004d, #440066);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255, 0, 128, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 40px rgba(255, 0, 200, 0.4);
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #ff66cc;
+  text-shadow: 0 0 12px #ff66cc;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  display: block;
+  text-align: left;
+  color: #e6e6e6;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: 0.3s;
+}
+input::placeholder {
+  color: #bbb;
+}
+input:focus {
+  box-shadow: 0 0 10px #ff66cc;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #ff66cc, #9933ff);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background: linear-gradient(90deg, #9933ff, #ff66cc);
+  box-shadow: 0 0 15px #ff66cc;
+  transform: translateY(-2px);
+}
+
+#resultado {
+  margin-top: 25px;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: inset 0 0 10px rgba(255, 0, 150, 0.3);
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 30px 20px;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}

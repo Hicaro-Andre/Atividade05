@@ -1,63 +1,115 @@
-  
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #f7f7f7;
-    }
+/* ======== RESET E BASE ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
-    h2 {
-      text-align: center;
-      color: #333;
-    }
+body {
+  background: linear-gradient(135deg, #101820, #16222a);
+  color: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    label {
-      display: block;
-      margin-top: 10px;
-      font-weight: bold;
-    }
+/* ======== CONTAINER PRINCIPAL ======== */
+.dashboard {
+  background: #1e293b;
+  width: 400px;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: all 0.3s ease;
+}
 
-    input {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
+.dashboard:hover {
+  transform: translateY(-5px);
+}
 
-    button {
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+/* ======== TÍTULO ======== */
+.dashboard h2 {
+  text-align: center;
+  font-weight: 600;
+  color: #00c6ff;
+  text-shadow: 0 0 10px rgba(0, 198, 255, 0.4);
+  margin-bottom: 10px;
+}
 
-    button:hover {
-      background-color: #45a049;
-    }
+/* ======== LABELS ======== */
+label {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin-top: 10px;
+}
 
-    #resultado {
-      margin-top: 20px;
-      background-color: white;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+/* ======== INPUTS ======== */
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-    }
+input:focus {
+  border-color: #00c6ff;
+  box-shadow: 0 0 8px rgba(0, 198, 255, 0.4);
+  outline: none;
+}
 
-    th, td {
-      border: 1px solid #ccc;
-      padding: 8px;
-      text-align: center;
-    }
+/* ======== BOTÃO ======== */
+button {
+  margin-top: 10px;
+  padding: 12px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-    th {
-      background-color: #f2f2f2;
-    }
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 198, 255, 0.3);
+}
+
+/* ======== RESULTADO ======== */
+#resultado {
+  margin-top: 15px;
+  background: #0f172a;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  border: 1px solid #1e293b;
+  transition: all 0.3s ease;
+}
+
+#resultado strong {
+  color: #00c6ff;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 500px) {
+  .dashboard {
+    width: 90%;
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}

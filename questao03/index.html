@@ -7,34 +7,45 @@
     <title>Lanchonete do IFMA</title>
   </head>
   <body>
-    <form id="lanchoneteForm">
-      <fieldset>
-        <legend>Lanchonete do IFMA</legend>
+    <div class="container">
+      <header>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Instituto_Federal_do_Maranh%C3%A3o_-_Marca_Vertical_2015.svg/1024px-Instituto_Federal_do_Maranh%C3%A3o_-_Marca_Vertical_2015.svg.png"
+          alt="Logo IFMA"
+          class="logo"
+        />
+        <h1>Lanchonete do IFMA</h1>
+      </header>
 
-        <label for="nome">Nome do Cliente:</label>
-        <input type="text" id="nome" placeholder="Digite seu nome" />
+      <form id="lanchoneteForm">
+        <fieldset>
+          <legend>Monte seu pedido</legend>
 
-        <p><strong>Bebidas:</strong></p>
-        <label><input type="radio" name="bebida" value="Suco" /> Suco</label>
-        <label
-          ><input type="radio" name="bebida" value="Refrigerante" />
-          Refrigerante</label
-        >
-        <label><input type="radio" name="bebida" value="Água" /> Água</label>
+          <label for="nome">Nome do Cliente:</label>
+          <input type="text" id="nome" placeholder="Digite seu nome" />
 
-        <p><strong>Doces e Salgados:</strong></p>
-        <label><input type="checkbox" value="Bolo" /> Bolo</label>
-        <label><input type="checkbox" value="Pastel" /> Pastel</label>
-        <label><input type="checkbox" value="Torta" /> Torta</label>
+          <p class="section-title">🥤 <strong>Bebidas:</strong></p>
+          <label><input type="radio" name="bebida" value="Suco" /> Suco</label>
+          <label
+            ><input type="radio" name="bebida" value="Refrigerante" />
+            Refrigerante</label
+          >
+          <label><input type="radio" name="bebida" value="Água" /> Água</label>
 
-        <div class="buttons">
-          <button type="button" onclick="calcular()">Calcular</button>
-          <button type="reset">Limpar</button>
-        </div>
+          <p class="section-title">🍰 <strong>Doces e Salgados:</strong></p>
+          <label><input type="checkbox" value="Bolo" /> Bolo</label>
+          <label><input type="checkbox" value="Pastel" /> Pastel</label>
+          <label><input type="checkbox" value="Torta" /> Torta</label>
 
-        <div id="resultado"></div>
-      </fieldset>
-    </form>
+          <div class="buttons">
+            <button type="button" onclick="calcular()">Calcular</button>
+            <button type="reset" class="btn-clear">Limpar</button>
+          </div>
+
+          <div id="resultado"></div>
+        </fieldset>
+      </form>
+    </div>
 
     <script src="script.js"></script>
   </body>

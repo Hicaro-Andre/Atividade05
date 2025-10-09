@@ -1,78 +1,123 @@
 
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      padding: 40px;
-      color: #333;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
-    h2 {
-      text-align: center;
-      color: #333;
-    }
+body {
+  background: linear-gradient(135deg, #dbeafe, #f0f9ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    #container {
-      max-width: 500px;
-      margin: auto;
-      background-color: white;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    }
+/* ===== Container principal ===== */
+#container {
+  background-color: #fff;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 
-    input {
-      width: 70%;
-      padding: 8px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
+h2 {
+  margin-bottom: 20px;
+  color: #1e3a8a;
+  font-size: 1.6rem;
+}
 
-    button {
-      padding: 8px 15px;
-      margin-left: 5px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+/* ===== Campo de entrada e botão ===== */
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
 
-    button:hover {
-      background-color: #45a049;
-    }
+#inputTarefa {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 20px;
-    }
+#inputTarefa:focus {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 5px rgba(59, 130, 246, 0.4);
+}
 
-    li {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #fafafa;
-      margin-bottom: 10px;
-      padding: 10px;
-      border-radius: 5px;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-    }
+#btnAdicionar {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
 
-    li.concluida span {
-      text-decoration: line-through;
-      color: gray;
-    }
+#btnAdicionar:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
 
-    .btn-remover {
-      background-color: #e74c3c;
-    }
+/* ===== Mensagem ===== */
+.mensagem {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #dc2626;
+}
 
-    .btn-remover:hover {
-      background-color: #c0392b;
-    }
+/* ===== Lista de tarefas ===== */
+#listaTarefas {
+  list-style: none;
+  margin-top: 10px;
+  text-align: left;
+}
 
-    .mensagem {
-      color: red;
-      margin-top: 10px;
-      text-align: center;
-    }
+#listaTarefas li {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+#listaTarefas li:hover {
+  background-color: #eef2ff;
+}
+
+#listaTarefas li span {
+  flex: 1;
+  cursor: pointer;
+}
+
+#listaTarefas li.completed span {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+#listaTarefas button {
+  background-color: transparent;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+#listaTarefas button:hover {
+  color: #b91c1c;
+}
