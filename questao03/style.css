@@ -1,0 +1,53 @@
+ 
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    fieldset {
+      background: white;
+      border: 2px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    legend {
+      font-weight: bold;
+      color: #006400;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    .buttons {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+    }
+    button {
+      padding: 5px 10px;
+      border: none;
+      background: #006400;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #228B22;
+    }
+    #resultado {
+      margin-top: 15px;
+      background: #e9ffe9;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  
