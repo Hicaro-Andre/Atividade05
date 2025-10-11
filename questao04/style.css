@@ -17,7 +17,7 @@
         line-height: 1.6;
       }
       
-      /* Container principal */
+     
       .quiz-container {
         background-color: rgba(255, 255, 255, 0.95);
         border-radius: 20px;
@@ -33,10 +33,9 @@
         transform: translateY(-5px);
       }
       
-      /* Título */
       h2 {
         text-align: center;
-        color: #2c3e50;
+        color: #f1f3f5;
         font-size: 2.5rem;
         margin-bottom: 30px;
         position: relative;
@@ -55,12 +54,12 @@
         border-radius: 2px;
       }
       
-      /* Área do quiz */
+      
       #quiz {
         margin-bottom: 30px;
       }
       
-      /* Questões */
+     
       .question {
         background-color: #f8f9fa;
         border-radius: 12px;
@@ -83,7 +82,6 @@
         font-weight: 600;
       }
       
-      /* Opções de resposta */
       .options {
         display: flex;
         flex-direction: column;
@@ -119,7 +117,6 @@
         width: 100%;
       }
       
-      /* Botão de correção */
       #btnCorrigir {
         background: linear-gradient(to right, #6a11cb, #2575fc);
         color: white;
@@ -145,7 +142,6 @@
         transform: translateY(1px);
       }
       
-      /* Resultado */
       #resultado {
         margin-top: 30px;
         padding: 25px;
@@ -171,7 +167,6 @@
         border-left: 5px solid #dc3545;
       }
       
-      /* Responsividade */
       @media (max-width: 768px) {
         .quiz-container {
           padding: 25px;
@@ -225,7 +220,7 @@
         }
       }
       
-      /* Animações */
+      
       @keyframes fadeIn {
         from { opacity: 0; transform: translateY(20px); }
         to { opacity: 1; transform: translateY(0); }
@@ -235,7 +230,6 @@
         animation: fadeIn 0.5s ease forwards;
       }
       
-      /* Efeito de foco para acessibilidade */
       .option input:focus + label {
         outline: 2px solid #2575fc;
         outline-offset: 2px;

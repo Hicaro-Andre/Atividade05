@@ -3,7 +3,7 @@ const perguntas = [
   {
     enunciado: "1️⃣ Qual linguagem é usada para estruturar páginas web?",
     opcoes: ["CSS", "HTML", "JavaScript", "Python"],
-    correta: 1 // HTML
+    correta: 1 
   },
   {
     enunciado: "2️⃣ Qual símbolo é usado para comentários em JavaScript?",
@@ -13,11 +13,11 @@ const perguntas = [
   {
     enunciado: "3️⃣ Qual comando exibe uma mensagem no console?",
     opcoes: ["alert()", "prompt()", "console.log()", "print()"],
-    correta: 2 // console.log()
+    correta: 2 
   }
 ];
 
-// Referências ao DOM
+
 const quiz = document.getElementById("quiz");
 const resultado = document.getElementById("resultado");
 const btnCorrigir = document.getElementById("btnCorrigir");
@@ -74,7 +74,7 @@ function corrigirQuiz() {
     }
   });
 
-  // Mensagem final personalizada
+ 
   let mensagem = "";
   if (pontuacao === perguntas.length) {
     mensagem = "🎉 Excelente! Você acertou todas!";
@@ -92,8 +92,8 @@ function corrigirQuiz() {
   `;
 }
 
-// Eventos
+
 btnCorrigir.addEventListener("click", corrigirQuiz);
 
-// Inicia o quiz
+
 carregarQuiz();

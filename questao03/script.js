@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('lanchoneteForm');
   const resultado = document.getElementById('resultado');
